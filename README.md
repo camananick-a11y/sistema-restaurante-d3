@@ -20,7 +20,7 @@
 
 -
 
-<img src="evidence/evidencia1.png" alt="CAP-EVIDENCIA" width="350" />
+<img src="Dia4/evidencia1.png" alt="CAP-EVIDENCIA" width="350" />
 
 -
 
