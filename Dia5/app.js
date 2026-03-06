@@ -8,6 +8,15 @@ let menu = [
     { nombre: "Ají de gallina", precio: 16, stock: 6 }
 ];
 
+// Normalizar texto tildes, mayúsculas, espacios
+function normalizarTexto(texto) {
+    return texto
+        .trim()
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+}
+
 // RENDER MENÚ - Dia 3 - Arrays
 function renderMenu() {
 
@@ -60,15 +69,21 @@ function agregarPlatoDemo() {
 // BUSCAR PLATO - Dia 4 - Metodos
 function buscarPlatoPorNombre(nombre) {
 
+    const nombreNormal = normalizarTexto(nombre);
+
     const plato = menu.find(p =>
-        p.nombre.toLowerCase() === nombre.toLowerCase()
+        normalizarTexto(p.nombre) === nombreNormal
     );
 
+    let mensaje = "";
     if (plato) {
-        alert("Encontrado: " + plato.nombre);
+        mensaje = "Encontrado: " + plato.nombre;
     } else {
-        alert("No encontrado");
+        mensaje = "No encontrado";
     }
+
+    const resultadoDiv = document.getElementById("resultadoBusqueda");
+    resultadoDiv.innerHTML = `<p><strong>${mensaje}</strong></p>`;
 }
 
 // FILTRAR STOCK BAJO - Dia 4 - Metodos
@@ -98,8 +113,10 @@ function obtenerResumenMenu() {
 // VENDER PLATO - Dia 4 - Metodos
 function venderPlato(nombre, cantidad) {
 
+    const nombreNormal = normalizarTexto(nombre);
+
     const plato = menu.find(p =>
-        p.nombre.toLowerCase() === nombre.toLowerCase()
+        normalizarTexto(p.nombre) === nombreNormal
     );
 
     if (!plato) {
@@ -108,49 +125,44 @@ function venderPlato(nombre, cantidad) {
     }
 
     if (plato.stock === 0) {
-        alert("Plato agotado");
+        alert("Plato no disponible");
         return;
     }
 
     if (plato.stock >= cantidad) {
-
         plato.stock -= cantidad;
         alert("Venta realizada");
-
     } else {
-
         alert("Stock insuficiente");
     }
 
     renderMenu();
 }
 
-
 // VERIFICAR ESTADO GENERAL - Dia 5 - 
 function verificarEstadoGeneral() {
-
     let agotados = 0;
     let bajos = 0;
 
     for (let i = 0; i < menu.length; i++) {
-
         if (menu[i].stock === 0) {
             agotados++;
-        }
-        else if (menu[i].stock <= 3) {
+        } else if (menu[i].stock <= 3) {
             bajos++;
         }
     }
 
+    let mensaje = "";
     if (agotados > 0) {
-        console.log("Hay platos agotados");
+        mensaje = "Hay platos agotados";
+    } else if (bajos > 0) {
+        mensaje = "Hay platos con stock bajo";
+    } else {
+        mensaje = "Todo disponible";
     }
-    else if (bajos > 0) {
-        console.log("Hay platos con stock bajo");
-    }
-    else {
-        console.log("Todo disponible");
-    }
+
+    const output = document.getElementById("output");
+    output.innerHTML += `<p><strong>${mensaje}</strong></p>`;
 }
 
 // EVENTOS - Dia 3 - Arrays
@@ -166,10 +178,7 @@ document
 document
     .getElementById("btnBuscar")
     .addEventListener("click", () => {
-
-        const nombre = document
-            .getElementById("inputBuscar").value;
-
+        const nombre = document.getElementById("inputBuscar").value;
         buscarPlatoPorNombre(nombre);
     });
 
@@ -184,9 +193,7 @@ document
 document
     .getElementById("btnVender")
     .addEventListener("click", () => {
-
         const nombre = document.getElementById("inputVender").value;
         const cantidad = parseInt(document.getElementById("inputCantidad").value);
-
         venderPlato(nombre, cantidad);
     });
