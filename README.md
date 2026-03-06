@@ -13,17 +13,11 @@
 -
 
 ## DIA4-METODOS
-
--
-
-# NICK CA
-
--
-
 <img src="evidence/evidencia1.png" alt="CAP-EVIDENCIA" width="350" />
 
 -
 
-# sistema-restaurante-d3
+## DIA 5 - CONDICIONALES, BUCLES Y ESTADOS
+<img src="Dia5/evidencia-dia5.png" alt="CAP-EVIDENCIA" width="350" />
 
 -
