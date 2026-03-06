@@ -1,4 +1,6 @@
-// ARRAY DE OBJETOS (mínimo 5 platos)
+// DIA 3 - Arrays
+
+// ARRAY DE OBJETOS
 let menu = [
     { nombre: "Arroz con pollo", precio: 12, stock: 5 },
     { nombre: "Lomo saltado", precio: 18, stock: 3 },
@@ -50,3 +52,7 @@ document.getElementById("btnAgregar").addEventListener("click", () => {
     agregarPlatoDemo();
     renderMenu();
 });
+
+
+// ------------------------------------------------------------------------
+
