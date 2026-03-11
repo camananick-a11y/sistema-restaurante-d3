@@ -24,3 +24,6 @@ Renderiza el menú en pantalla y conecta los botones.
 main.js
 Es el punto de inicio del sistema.
 Inicializa el programa y conecta todos los módulos.
+
+## DIA 6 - MODULARIZACION
+<img src="Dia6/evidencia-dia6" widht="350">
