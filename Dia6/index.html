@@ -1,0 +1,73 @@
+<!-- Dia-6 -->
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Restaurante</title>
+    <!-- Dia-5 -->
+    <style>
+        /* Fondo de la página */
+        body {
+            background-color: rgb(182, 189, 255);
+        }
+
+        /* Color - Stock */
+        .normal {
+            color: black;
+        }
+
+        .bajo {
+            color: orange;
+            font-weight: bold;
+        }
+
+        .agotado {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Menú del Restaurante</h1>
+
+    <!-- Dia 3 Arrays -->
+    <button id="btnMostrar">Mostrar menú</button>
+    <button id="btnAgregar">Agregar plato demo</button>
+
+    <br><br>
+
+    <!-- Dia 4 Metodos -->
+    <hr>
+    <h2>Herramientas</h2>
+
+    <input id="inputBuscar" placeholder="Buscar plato">
+    <button id="btnBuscar">Buscar</button>
+
+    <button id="btnStockBajo">Ver stock bajo</button>
+
+    <button id="btnResumen">Ver resumen</button>
+
+    <h2>Resultado de búsqueda</h2>
+    <div id="resultadoBusqueda"></div>
+
+    <hr>
+
+    <h3>Vender plato</h3>
+    <input id="inputVender" placeholder="Plato a vender">
+    <input id="inputCantidad" placeholder="Cantidad">
+    <button id="btnVender">Vender</button>
+
+    <br><br>
+    <hr>
+
+    <div id="output"></div>
+
+    <script type="module" src="./main.js"></script>
+
+</body>
+
+</html>
