@@ -8,6 +8,8 @@
 
 -Dia6/              -    Contiene los ejercicios del dia 6 (Modularizacion)
 
+-Dia7/              -    Contiene los ejercicios del dia 7 (Async / Await)
+
 ---
 ## Estructura del proyecto - Dia6
 menu.js
@@ -41,8 +43,15 @@ Inicializa el programa y conecta todos los módulos.
 <img src="Dia5/evidencia-dia5.png" alt="CAP-EVIDENCIA" width="350" />
  
 ---
+
 ## DIA 6 - MODULARIZACION
 
 <img src="Dia6/evidencia-dia6.png" width="350" />
+
+---
+
+## DIA 7 - SIMULACION + ASYNC / AWAIT
+
+<img src="Dia7/evidencia7.png" width="350" />
 
 ---
