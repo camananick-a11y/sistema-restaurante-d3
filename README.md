@@ -10,6 +10,8 @@
 
 -Dia7/              -    Contiene los ejercicios del dia 7 (Async / Await)
 
+-Dia8/              -    Contiene los ejercicios del dia 8 (try / catch)
+
 ---
 ## Estructura del proyecto - Dia6
 menu.js
@@ -53,5 +55,11 @@ Inicializa el programa y conecta todos los módulos.
 ## DIA 7 - SIMULACION + ASYNC / AWAIT
 
 <img src="Dia7/evidencia7.png" width="350" />
+
+---
+
+## DIA 8 - MANEJO - ERRORES / VALIDACIONES
+
+<img src="Dia8/evidencia8.png" width="350" />
 
 ---
